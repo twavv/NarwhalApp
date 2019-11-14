@@ -2,8 +2,9 @@
 
 Michigan requires voters to show a form photo identification at the polls.
 Michigonians without a valid photo ID **can** still vote, after signing an
-affidavit attesting that they do not possess picture
-identification.
+affidavit attesting that they do not possess picture identification.
+
+**Note**: IDs do not need your address.
 
 ## Valid Identification
 
