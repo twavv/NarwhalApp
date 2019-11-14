@@ -1,19 +1,21 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Text, TouchableHighlight } from "react-native";
 
-export const NavigationIcon: React.FC = ({ children }) => {
+export const NavigationIcon: React.FC<{ label: string }> = ({ label }) => {
   return (
-    <View
+    <TouchableHighlight
       style={{
         width: 100,
         height: 100,
         margin: 10,
+        justifyContent: "center",
         alignItems: "center",
         borderColor: "#cccccc",
         borderWidth: 1,
       }}
+      onPress={() => {}}
     >
-      <Text>{children}</Text>
-    </View>
+      <Text>{label}</Text>
+    </TouchableHighlight>
   );
 };

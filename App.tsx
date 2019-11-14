@@ -6,6 +6,7 @@ import { createStackNavigator } from "react-navigation-stack";
 
 import { HomeView } from "./views/home";
 import { NarwhalRoute, useNavigation } from "./views/routes";
+import { AbsenteeBallotsView } from "./views/voting/AbsenteeBallots/AbsenteeBallots";
 
 const SplashScreen: NarwhalRoute = () => {
   const navigation = useNavigation();
@@ -26,7 +27,7 @@ SplashScreen.navigationOptions = {
 
 const MainNavigator = createStackNavigator(
   {
-    Root: { screen: SplashScreen },
+    Root: { screen: AbsenteeBallotsView },
     Home: { screen: HomeView },
   },
   { initialRouteName: "Root" },

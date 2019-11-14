@@ -6,11 +6,11 @@ import { NavigationIcon } from "./components";
 export const HomeView: NavigationComponent<{}, {}> = () => {
   return (
     <View style={styles.container}>
-      <NavigationIcon>Issues</NavigationIcon>
-      <NavigationIcon>Dates</NavigationIcon>
-      <NavigationIcon>Candidates</NavigationIcon>
-      <NavigationIcon>FAQs</NavigationIcon>
-      <NavigationIcon>Locations</NavigationIcon>
+      <NavigationIcon label={"Issues"} />
+      <NavigationIcon label={"Dates"} />
+      <NavigationIcon label={"Candidates"} />
+      <NavigationIcon label={"FAQs"} />
+      <NavigationIcon label={"Locations"} />
     </View>
   );
 };
