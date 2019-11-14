@@ -30,7 +30,7 @@ const MainNavigator = createStackNavigator(
     Root: { screen: AbsenteeBallotsView },
     Home: { screen: HomeView },
   },
-  { initialRouteName: "Root" },
+  { initialRouteName: "Home" },
 );
 
 const App = createAppContainer(MainNavigator);
