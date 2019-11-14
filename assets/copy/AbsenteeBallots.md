@@ -6,4 +6,4 @@ You can vote absentee for any reason.
 * Foo
 * Bar
 
-**Hi Emmet!**
+**Hi Emmett!**
