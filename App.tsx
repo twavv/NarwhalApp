@@ -1,12 +1,13 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 
-import { createAppContainer, NavigationComponent } from "react-navigation";
+import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
 import { HomeView } from "./views/home";
 import { NarwhalRoute, useNavigation } from "./views/routes";
 import { AbsenteeBallotsView } from "./views/voting/AbsenteeBallots/AbsenteeBallots";
+import { VoterRegistrationView } from "./views/registration/VoterRegistrationView";
 
 const SplashScreen: NarwhalRoute = () => {
   const navigation = useNavigation();
@@ -29,6 +30,7 @@ const MainNavigator = createStackNavigator(
   {
     Root: { screen: AbsenteeBallotsView },
     Home: { screen: HomeView },
+    VoterRegistration: { screen: VoterRegistrationView },
   },
   { initialRouteName: "Home" },
 );

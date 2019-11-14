@@ -1,5 +1,4 @@
 import * as React from "react";
-import { NavigationStackProp } from "react-navigation-stack";
 import {
   NavigationComponent,
   NavigationContext,

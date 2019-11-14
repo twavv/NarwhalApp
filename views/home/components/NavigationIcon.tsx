@@ -6,13 +6,23 @@ import {
   TouchableHighlight,
   View,
 } from "react-native";
+import { useNavigation } from "../../routes";
 
 export const NavigationIcon: React.FC<{
+  navTo?: string;
   image: ImageSourcePropType;
   label: string;
-}> = ({ image, label }) => {
+}> = ({ image, label, navTo }) => {
+  const navigation = useNavigation();
   return (
-    <TouchableHighlight onPress={() => {}}>
+    <TouchableHighlight
+      onPress={() => {
+        if (!navTo) {
+          return;
+        }
+        navigation.navigate(navTo);
+      }}
+    >
       <View
         style={{
           width: 150,

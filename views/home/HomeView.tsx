@@ -19,6 +19,7 @@ export const HomeView: NavigationComponent<{}, {}> = () => {
         image={require("../../assets/icons/politician.png")}
       />
       <NavigationIcon
+        navTo={"VoterRegistration"}
         label={"Voter Registration"}
         image={require("../../assets/icons/registration.png")}
       />
