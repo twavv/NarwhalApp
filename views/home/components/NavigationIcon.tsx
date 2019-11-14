@@ -1,21 +1,32 @@
 import React from "react";
-import { Text, TouchableHighlight } from "react-native";
+import {
+  Image,
+  ImageSourcePropType,
+  Text,
+  TouchableHighlight,
+  View,
+} from "react-native";
 
-export const NavigationIcon: React.FC<{ label: string }> = ({ label }) => {
+export const NavigationIcon: React.FC<{
+  image: ImageSourcePropType;
+  label: string;
+}> = ({ image, label }) => {
   return (
-    <TouchableHighlight
-      style={{
-        width: 100,
-        height: 100,
-        margin: 10,
-        justifyContent: "center",
-        alignItems: "center",
-        borderColor: "#cccccc",
-        borderWidth: 1,
-      }}
-      onPress={() => {}}
-    >
-      <Text>{label}</Text>
+    <TouchableHighlight onPress={() => {}}>
+      <View
+        style={{
+          width: 150,
+          height: 150,
+          margin: 10,
+          justifyContent: "center",
+          alignItems: "center",
+          borderColor: "#cccccc",
+          borderWidth: 1,
+        }}
+      >
+        <Image height={60} width={60} source={image} />
+        <Text>{label}</Text>
+      </View>
     </TouchableHighlight>
   );
 };
