@@ -9,6 +9,11 @@ import { NarwhalRoute, useNavigation } from "./views/routes";
 import { AbsenteeBallotsView } from "./views/voting/AbsenteeBallots/AbsenteeBallots";
 import { VoterRegistrationView } from "./views/registration/VoterRegistrationView";
 import { MyRepsView } from "./views/myreps/MyRepsView";
+import { DisabilityInfoView } from "./views/faq/DisabilityInfo";
+import { FAQView } from "./views/faq/FAQView";
+import { FAQMiscView } from "./views/faq/Misc";
+import { FAQTransInfoView } from "./views/faq/TransInfo";
+import { FAQVoterId } from "./views/faq/VoterID";
 
 const SplashScreen: NarwhalRoute = () => {
   const navigation = useNavigation();
@@ -33,6 +38,11 @@ const MainNavigator = createStackNavigator(
     Home: { screen: HomeView },
     VoterRegistration: { screen: VoterRegistrationView },
     MyReps: { screen: MyRepsView },
+    FAQ: { screen: FAQView },
+    "FAQ/DisabilityInfo": { screen: DisabilityInfoView },
+    "FAQ/Misc": { screen: FAQMiscView },
+    "FAQ/TransInfo": { screen: FAQTransInfoView },
+    "FAQ/VoterId": { screen: FAQVoterId },
   },
   { initialRouteName: "Home" },
 );

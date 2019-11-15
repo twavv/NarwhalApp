@@ -1,4 +1,8 @@
-export default `# Information for Transgender Voters
+import { NarwhalRoute } from "../routes";
+import { MarkdownView } from "../../components/MarkdownView";
+import * as React from "react";
+
+const COPY = `# Information for Transgender Voters
 
 We understand that having legal documentation that does not accurately reflect
 personal identities can present certain challenges for transgender voters.
@@ -14,3 +18,11 @@ For more information, check out the National Center For Transgender Equality's
 Para obtener información, mire la
 [Guía de \#VotingWhileTrans](https://transformthevote.org/s/voting-while-trans-c4-es-final.pdf)
 de National Center For Transgender Equality.`;
+
+export const FAQTransInfoView: NarwhalRoute = () => {
+  return <MarkdownView markdown={COPY} />;
+};
+
+FAQTransInfoView.navigationOptions = {
+  title: "Transgender Issues",
+};

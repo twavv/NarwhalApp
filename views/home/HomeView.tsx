@@ -29,6 +29,7 @@ export const HomeView: NavigationComponent<{}, {}> = () => {
         image={require("../../assets/icons/location.png")}
       />
       <NavigationIcon
+        navTo={"FAQ"}
         label={"FAQs"}
         image={require("../../assets/icons/help.png")}
       />

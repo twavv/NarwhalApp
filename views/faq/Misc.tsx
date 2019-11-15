@@ -1,4 +1,8 @@
-export default `# Miscellaneous Questions
+import { NarwhalRoute } from "../routes";
+import { MarkdownView } from "../../components/MarkdownView";
+import * as React from "react";
+
+const COPY = `# Miscellaneous Questions
 
 - Do I have to show my voter registration card in order to vote?
     * No. As long as you are in the correct polling location, your name will appear on the registration list supplied to your precinct. The Voter Identification Card is for your reference and is not required to vote.
@@ -38,3 +42,11 @@ must confine their votes to a single party column.
     * Yes. Absent voter ballots simply allow voters who are eligible to cast ballots prior to Election Day. They are counted on Election Day along with all ballots voted at the polls.
 
 [Source: michigan.gov](https://www.michigan.gov/sos/0,4670,7-127-1633_8716-202476--,00.html)`;
+
+export const FAQMiscView: NarwhalRoute = () => {
+  return <MarkdownView markdown={COPY} />;
+};
+
+FAQMiscView.navigationOptions = {
+  title: "Miscellaneous Issues",
+};

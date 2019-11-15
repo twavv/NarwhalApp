@@ -1,4 +1,9 @@
-export default `# Information for Disabled Voters
+import * as React from "react";
+
+import { NarwhalRoute } from "../routes";
+import { MarkdownView } from "../../components/MarkdownView";
+
+const COPY = `# Information for Disabled Voters
 
 - Federal and state laws require Michigan's cities, townships and villages to
 provide a reasonable number of accessible registration facilities.
@@ -21,3 +26,11 @@ alternative site that is accessible.
 State's Bureau of Elections by email at elections@michigan.gov.
 
 [Source: michigan.gov](https://www.michigan.gov/sos/0,4670,7-127-1633_8716-27710--,00.html)`;
+
+export const DisabilityInfoView: NarwhalRoute = () => {
+  return <MarkdownView markdown={COPY} />;
+};
+
+DisabilityInfoView.navigationOptions = {
+  title: "Voting & Disabilities",
+};
