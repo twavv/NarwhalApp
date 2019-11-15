@@ -28,5 +28,5 @@ LAN, try a tunnel connection.
 
 <p align="center">
   <img src="./images/LGBT_DETROIT_narwalls_960_720.png" width="360" height="480">
-  <img src="./images/landing_page.png" width="360" height="480">
+  <img src="./images/landing_page.png" width="269.87" height="480">
 </p>
