@@ -26,8 +26,7 @@ const COPY = `# Miscellaneous Questions
 
 - Can I vote a "split" ticket?
     * August Primary
-        * You cannot "split" your ticket (i.e., vote in more than one party column) when voting in the August primary. Voters participating in an August primary
-must confine their votes to a single party column.
+        * You cannot "split" your ticket (i.e., vote in more than one party column) when voting in the August primary. Voters participating in an August primary must confine their votes to a single party column.
 
     * November General Election
         * You can "split" your ticket when voting in the November general election. A voter participating in a November general election who wishes to cast a "split" ticket can vote for individual candidates of his or her choice under any party.

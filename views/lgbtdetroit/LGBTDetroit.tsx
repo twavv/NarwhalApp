@@ -4,9 +4,7 @@ import * as React from "react";
 
 const COPY = `# About LGBT Detroit
 
-LGBT Detroit is a Detroit based 501c(3) nonprofit organization (EIN 56-2393981)
-whose mission is to increase awareness of and support to Detroit's dynamic LGBT
-culture through education and advocacy with integrity and pride.
+LGBT Detroit is a Detroit based 501c(3) nonprofit organization (EIN 56-2393981) whose mission is to increase awareness of and support to Detroit's dynamic LGBT culture through education and advocacy with integrity and pride.
 
 For more information, visit [our website](https://www.lgbtdetroit.org/).
 
