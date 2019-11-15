@@ -19,6 +19,7 @@ import { AgeRequirementsView } from "./views/registration/AgeRequirements"
 import { MilitaryInfoView } from "./views/registration/MilitaryInfo"
 import { StudentInfoView } from "./views/registration/StudentInfo"
 import { RegistrationView } from "./views/registration/VoterRegistration"
+import { LGBTDetroitView } from "./views/lgbtdetroit/LGBTDetroit";
 
 const SplashScreen: NarwhalRoute = () => {
   const navigation = useNavigation();
@@ -54,6 +55,7 @@ const MainNavigator = createStackNavigator(
     "FAQ/Misc": { screen: FAQMiscView },
     "FAQ/TransInfo": { screen: FAQTransInfoView },
     "FAQ/VoterId": { screen: FAQVoterId },
+    LGBTDetroit: { screen: LGBTDetroitView },
   },
   { initialRouteName: "Home" },
 );

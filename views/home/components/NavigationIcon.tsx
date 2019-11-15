@@ -11,9 +11,12 @@ import { useNavigation } from "../../routes";
 export const NavigationIcon: React.FC<{
   navTo?: string;
   image: ImageSourcePropType;
-  label: string;
+  label?: string;
 }> = ({ image, label, navTo }) => {
   const navigation = useNavigation();
+  const imageStyle = label
+    ? { width: 80, height: 50, resizeMode: "contain" }
+    : { width: 140, height: 140, resizeMode: "contain" };
   return (
     <TouchableHighlight
       onPress={() => {
@@ -34,8 +37,11 @@ export const NavigationIcon: React.FC<{
           borderWidth: 1,
         }}
       >
-        <Image height={60} width={60} source={image} />
-        <Text>{label}</Text>
+        <Image
+          style={{ width: 80, height: 50, resizeMode: "contain" }}
+          source={image}
+        />
+        {label ? <Text>{label}</Text> : null}
       </View>
     </TouchableHighlight>
   );
