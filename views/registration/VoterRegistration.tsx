@@ -1,4 +1,8 @@
-export default `# Voter Registration
+import { NarwhalRoute } from "../routes";
+import { MarkdownView } from "../../components/MarkdownView";
+import * as React from "react";
+
+const COPY = `# Voter Registration
 
 ## Eligibility
 
@@ -42,9 +46,17 @@ If you are living outside the U.S., you may send a
 This application is distributed through U.S. embassies and military bases.
 It also serves as a way to request an absentee ballot.
 
-## Verify Your Voter Registration
+## Verify Your Voter Registration 
 
 You can check your voter registration status through the
 [Michigan Voter Information Center](https://mvic.sos.state.mi.us/).
 
 [Source: michigan.gov](https://www.michigan.gov/sos/0,4670,7-127-1633_8716_8726_47669---,00.html)`;
+
+export const RegistrationView: NarwhalRoute = () => {
+  return <MarkdownView markdown={COPY} />;
+};
+
+RegistrationView.navigationOptions = {
+  title: "Voter Registration",
+};

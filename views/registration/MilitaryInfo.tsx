@@ -1,4 +1,8 @@
-export default `# Military and Overseas Civilian Election Information
+import { NarwhalRoute } from "../routes";
+import { MarkdownView } from "../../components/MarkdownView";
+import * as React from "react";
+
+const COPY = `# Military and Overseas Civilian Election Information
 
 Special services are provided to assist military and overseas civilian voters
 participate in elections. Only those voters covered under the Uniformed and
@@ -37,3 +41,11 @@ mail, fax, or scan and email to your local clerk based on your home residence.
 
 For more detailed information, click
 [here](https://www.michigan.gov/sos/0,4670,7-127-1633_8716-511653--,00.html).`;
+
+export const MilitaryInfoView: NarwhalRoute = () => {
+  return <MarkdownView markdown={COPY} />;
+};
+
+MilitaryInfoView.navigationOptions = {
+  title: "Military and Overseas Civilian Info",
+};

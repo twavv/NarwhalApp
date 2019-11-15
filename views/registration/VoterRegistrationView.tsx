@@ -1,25 +1,22 @@
+import * as React from "react";
+
 import { NarwhalRoute } from "../routes";
-import React from "react";
-import Markdown from "react-native-markdown-renderer";
-import { ScrollView } from "react-native";
-
-import COPY_VoterRegistration from "./VoterRegistration";
-import COPY_AgeRequirements from "./AgeRequirements";
-import COPY_MilitaryInfo from "./MilitaryInfo";
-
-const COPY =
-  `${COPY_VoterRegistration}\n\n` +
-  `${COPY_AgeRequirements}\n\n` +
-  `${COPY_MilitaryInfo}\n\n`;
+import { NavDrawer } from "../../components/NavDrawer";
+import { NavRow } from "../../components/NavRow";
 
 export const VoterRegistrationView: NarwhalRoute = () => {
   return (
-    <ScrollView style={{ padding: 15 }}>
-      <Markdown>{COPY}</Markdown>
-    </ScrollView>
+    <NavDrawer>
+      <NavRow navTo={"Registration/Registration"} label={" General Registration"} />
+      <NavRow navTo={"Registration/AbsenteeBallots"} label={"Absentee Ballots"} />
+      <NavRow navTo={"Registration/AgeRequirements"} label={"Age Requirements"} />
+      <NavRow navTo={"Registration/MilitaryInfo"} label={"Military and Civilians Abroad"} />
+      <NavRow navTo={"Registration/StudentInfo"} label={"Student Voters"} />
+
+    </NavDrawer>
   );
 };
 
 VoterRegistrationView.navigationOptions = {
-  title: "Voter Registration",
+  title: "Registration Information",
 };

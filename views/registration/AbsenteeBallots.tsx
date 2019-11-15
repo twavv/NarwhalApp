@@ -1,4 +1,8 @@
-export default `# Absentee Ballots
+import { NarwhalRoute } from "../routes";
+import { MarkdownView } from "../../components/MarkdownView";
+import * as React from "react";
+
+const COPY = `# Absentee Ballots
 
 All eligible and registered voters in Michigan may now request an absent voter
 ballot without providing a reason.
@@ -48,3 +52,11 @@ Emergency ballots must be returned to the clerk's office by 8 p.m. on election d
 
 [Source: michigan.gov](https://www.michigan.gov/sos/0,4670,7-127-1633_8716_8728-34991--,00.html)
 `;
+
+export const AbsenteeBallView: NarwhalRoute = () => {
+  return <MarkdownView markdown={COPY} />;
+};
+
+AbsenteeBallView.navigationOptions = {
+  title: "Absentee Ballots",
+};

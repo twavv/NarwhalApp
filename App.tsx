@@ -14,6 +14,11 @@ import { FAQView } from "./views/faq/FAQView";
 import { FAQMiscView } from "./views/faq/Misc";
 import { FAQTransInfoView } from "./views/faq/TransInfo";
 import { FAQVoterId } from "./views/faq/VoterID";
+import { AbsenteeBallView } from "./views/registration/AbsenteeBallots"
+import { AgeRequirementsView } from "./views/registration/AgeRequirements"
+import { MilitaryInfoView } from "./views/registration/MilitaryInfo"
+import { StudentInfoView } from "./views/registration/StudentInfo"
+import { RegistrationView } from "./views/registration/VoterRegistration"
 
 const SplashScreen: NarwhalRoute = () => {
   const navigation = useNavigation();
@@ -38,6 +43,12 @@ const MainNavigator = createStackNavigator(
     Home: { screen: HomeView },
     VoterRegistration: { screen: VoterRegistrationView },
     MyReps: { screen: MyRepsView },
+    RegInfo: { screen: VoterRegistrationView },
+    "Registration/AbsenteeBallots": { screen: AbsenteeBallView},
+    "Registration/AgeRequirements": { screen: AgeRequirementsView },
+    "Registration/MilitaryInfo": { screen: MilitaryInfoView },
+    "Registration/StudentInfo": { screen: StudentInfoView },
+    "Registration/Registration": { screen: RegistrationView },
     FAQ: { screen: FAQView },
     "FAQ/DisabilityInfo": { screen: DisabilityInfoView },
     "FAQ/Misc": { screen: FAQMiscView },
