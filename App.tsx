@@ -14,6 +14,7 @@ import { FAQView } from "./views/faq/FAQView";
 import { FAQMiscView } from "./views/faq/Misc";
 import { FAQTransInfoView } from "./views/faq/TransInfo";
 import { FAQVoterId } from "./views/faq/VoterID";
+import { LGBTDetroitView } from "./views/lgbtdetroit/LGBTDetroit";
 
 const SplashScreen: NarwhalRoute = () => {
   const navigation = useNavigation();
@@ -43,6 +44,7 @@ const MainNavigator = createStackNavigator(
     "FAQ/Misc": { screen: FAQMiscView },
     "FAQ/TransInfo": { screen: FAQTransInfoView },
     "FAQ/VoterId": { screen: FAQVoterId },
+    LGBTDetroit: { screen: LGBTDetroitView },
   },
   { initialRouteName: "Home" },
 );

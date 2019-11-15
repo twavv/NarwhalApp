@@ -33,6 +33,10 @@ export const HomeView: NavigationComponent<{}, {}> = () => {
         label={"FAQs"}
         image={require("../../assets/icons/help.png")}
       />
+      <NavigationIcon
+        navTo={"LGBTDetroit"}
+        image={require("../../assets/icons/lgbtdetroit.png")}
+      />
     </View>
   );
 };
