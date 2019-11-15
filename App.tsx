@@ -14,12 +14,13 @@ import { FAQView } from "./views/faq/FAQView";
 import { FAQMiscView } from "./views/faq/Misc";
 import { FAQTransInfoView } from "./views/faq/TransInfo";
 import { FAQVoterId } from "./views/faq/VoterID";
-import { AbsenteeBallView } from "./views/registration/AbsenteeBallots"
-import { AgeRequirementsView } from "./views/registration/AgeRequirements"
-import { MilitaryInfoView } from "./views/registration/MilitaryInfo"
-import { StudentInfoView } from "./views/registration/StudentInfo"
-import { RegistrationView } from "./views/registration/VoterRegistration"
+import { AbsenteeBallView } from "./views/registration/AbsenteeBallots";
+import { AgeRequirementsView } from "./views/registration/AgeRequirements";
+import { MilitaryInfoView } from "./views/registration/MilitaryInfo";
+import { StudentInfoView } from "./views/registration/StudentInfo";
+import { RegistrationView } from "./views/registration/VoterRegistration";
 import { LGBTDetroitView } from "./views/lgbtdetroit/LGBTDetroit";
+import { ElectionInfoView } from "./views/electioninfo/ElectionInfoView";
 
 const SplashScreen: NarwhalRoute = () => {
   const navigation = useNavigation();
@@ -45,7 +46,7 @@ const MainNavigator = createStackNavigator(
     VoterRegistration: { screen: VoterRegistrationView },
     MyReps: { screen: MyRepsView },
     RegInfo: { screen: VoterRegistrationView },
-    "Registration/AbsenteeBallots": { screen: AbsenteeBallView},
+    "Registration/AbsenteeBallots": { screen: AbsenteeBallView },
     "Registration/AgeRequirements": { screen: AgeRequirementsView },
     "Registration/MilitaryInfo": { screen: MilitaryInfoView },
     "Registration/StudentInfo": { screen: StudentInfoView },
@@ -56,6 +57,7 @@ const MainNavigator = createStackNavigator(
     "FAQ/TransInfo": { screen: FAQTransInfoView },
     "FAQ/VoterId": { screen: FAQVoterId },
     LGBTDetroit: { screen: LGBTDetroitView },
+    ElectionInfo: { screen: ElectionInfoView },
   },
   { initialRouteName: "Home" },
 );
