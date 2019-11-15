@@ -1,11 +1,14 @@
 import * as React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 import { NavigationComponent } from "react-navigation";
 import { NavigationIcon } from "./components";
 
 export const HomeView: NavigationComponent<{}, {}> = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainer}
+    >
       <NavigationIcon
         label={"Current Issues"}
         image={require("../../assets/icons/issues.png")}
@@ -38,7 +41,7 @@ export const HomeView: NavigationComponent<{}, {}> = () => {
         navTo={"LGBTDetroit"}
         image={require("../../assets/icons/lgbtdetroit.png")}
       />
-    </View>
+    </ScrollView>
   );
 };
 
@@ -48,9 +51,11 @@ HomeView.navigationOptions = {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#fff",
+  },
+  contentContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
