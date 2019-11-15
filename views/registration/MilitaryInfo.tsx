@@ -37,7 +37,6 @@ Download a Federal Post Card Application (FPCA), complete and submit by postal
 mail, fax, or scan and email to your local clerk based on your home residence.
 3. Check the status of a requested absent voter ballot through the
 [Michigan Voter Information Center](https://mvic.sos.state.mi.us/)
-4.
 
 For more detailed information, click
 [here](https://www.michigan.gov/sos/0,4670,7-127-1633_8716-511653--,00.html).`;
