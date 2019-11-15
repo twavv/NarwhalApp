@@ -4,18 +4,23 @@ import { getRepresentatives } from "./api";
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
 import { RepInfo } from "./RepInfo";
+import { AddressEntry } from "./AddressEntry";
 
 export const MyRepsView: NarwhalRoute = () => {
-  const address = `220 N 1st St, Ann Arbor, MI, 48104`;
-  const reps = usePromise(() => getRepresentatives(address));
-  if (!reps) {
-    return <View />;
-  }
+  const [address, setAddress] = React.useState<string>("");
+  const reps = usePromise(async () => {
+    if (!address) {
+      return null;
+    }
+    return await getRepresentatives(address);
+  }, [address]);
+  const repsRendered = reps
+    ? reps.map((data, i) => <RepInfo key={i} data={data} />)
+    : null;
   return (
     <ScrollView>
-      {reps.map((data, i) => (
-        <RepInfo key={i} data={data} />
-      ))}
+      <AddressEntry onSubmit={(value) => setAddress(value)} />
+      <View style={{ padding: 10 }}>{repsRendered}</View>
     </ScrollView>
   );
 };
