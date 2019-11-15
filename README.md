@@ -14,4 +14,4 @@ yarn start
 Scan the QR code using the Expo app.
 
 
-![app_logo](./images/LGBT_DETROIT_narwalls_960_720.png =360x480)
+![app_logo](./images/LGBT_DETROIT_narwalls_960_720.png){:height="480px" width="360px"}
